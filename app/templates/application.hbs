@@ -1,9 +1,19 @@
 {{#if session.isAuthenticated}}
   Logged in as {{session.currentUser.displayName}}
   <button {{action "logout"}}>Logout</button>
+
+  <br>
+  <hr>
+  <br>
+
   {{outlet}}
+
 {{else}}
   <button {{action "login" "google"}}>Login with Google</button>
-{{/if}}
 
-{{outlet}}
+  <br>
+  <hr>
+  <br>
+
+  Login to continue
+{{/if}}
