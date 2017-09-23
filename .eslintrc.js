@@ -14,7 +14,7 @@ module.exports = {
     "prettier/prettier": "error",
 
     // ES6
-    "arrow-parens": ["error", "always"],
+    "arrow-parens": ["error", "as-needed"],
     "generator-star-spacing": [
       "error",
       {
