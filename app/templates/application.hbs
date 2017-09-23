@@ -1,3 +1,5 @@
+{{notification-container position="top-right"}}
+
 {{#if session.isAuthenticated}}
   Logged in as {{session.currentUser.displayName}}
   <button {{action "logout"}}>Logout</button>
