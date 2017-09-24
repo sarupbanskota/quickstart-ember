@@ -1,18 +1,12 @@
 export function initialize(application) {
-  application.inject("route", "session", "service:session");
-  application.inject("component", "session", "service:session");
-  application.inject("controller", "session", "service:session");
+  let inject = (property, value) => {
+    application.inject("controller", property, value);
+    application.inject("component", property, value);
+    application.inject("route", property, value);
+  };
 
-  application.inject(
-    "component",
-    "notifications",
-    "service:notification-messages"
-  );
-  application.inject(
-    "controller",
-    "notifications",
-    "service:notification-messages"
-  );
+  inject("session", "service:session");
+  inject("notifications", "service:notification-messages");
 }
 
 export default {
